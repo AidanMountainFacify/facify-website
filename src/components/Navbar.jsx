@@ -10,6 +10,7 @@ const links = [
   { to: '/pricing', label: 'Pricing' },
   { to: '/about', label: 'About' },
   { to: '/blog', label: 'Blog' },
+  { to: '/help', label: 'Help' },
   { to: '/contact', label: 'Contact' },
 ]
 
