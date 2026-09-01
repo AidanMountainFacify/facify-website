@@ -1,15 +1,10 @@
 import { Link } from 'react-router-dom'
-import logoMark from '../assets/logo-mark.svg'
+import facifyLogo from '../assets/facify-logo.svg'
 
-export default function Logo({ dark = false }) {
+export default function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-2.5 shrink-0">
-      <img src={logoMark} alt="Facify logo" className="h-9 w-9" />
-      <span
-        className={`text-xl font-bold tracking-tight ${dark ? 'text-white' : 'text-ink'}`}
-      >
-        Facify
-      </span>
+    <Link to="/" className="flex shrink-0 items-center">
+      <img src={facifyLogo} alt="Facify" className="h-8 w-auto" />
     </Link>
   )
 }
