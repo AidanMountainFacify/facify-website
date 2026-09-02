@@ -16,6 +16,12 @@ const columns = [
     links: [
       { to: '/about', label: 'About' },
       { to: '/blog', label: 'Blog' },
+    ],
+  },
+  {
+    title: 'Support',
+    links: [
+      { to: '/help', label: 'Help Center' },
       { to: '/contact', label: 'Contact' },
     ],
   },
@@ -34,7 +40,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 sm:grid-cols-2">
+          <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
             {columns.map((col) => (
               <div key={col.title}>
                 <h4 className="text-sm font-semibold text-ink">{col.title}</h4>

@@ -7,6 +7,7 @@ import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import Contact from './pages/Contact'
 import Features from './pages/Features'
+import Help from './pages/Help'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import Pricing from './pages/Pricing'
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/help" element={<Help />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
