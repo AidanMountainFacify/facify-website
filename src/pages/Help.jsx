@@ -1,4 +1,5 @@
 import { BookOpen } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import Eyebrow from '../components/Eyebrow'
 import Section from '../components/Section'
@@ -41,9 +42,12 @@ export default function Help() {
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 {tutorial.summary}
               </p>
-              <p className="mt-4 text-xs italic text-muted/70">
-                [Full walkthrough coming soon]
-              </p>
+              <Link
+                to="/help"
+                className="mt-4 inline-block text-sm font-semibold text-brand-blue hover:underline"
+              >
+                Learn more
+              </Link>
             </div>
           ))}
         </div>

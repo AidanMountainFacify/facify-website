@@ -38,27 +38,17 @@ export const tutorials = [
   {
     slug: 'setting-up-circuits',
     title: 'Setting up your first Circuit',
-    summary: 'Choose a trigger — birthday, holiday, or a custom date — and an item, and let Facify send automatically.',
-  },
-  {
-    slug: 'connecting-salesforce',
-    title: 'Connecting Facify to Salesforce',
-    summary: 'Install the plugin into your existing Salesforce org — no infrastructure changes required.',
-  },
-  {
-    slug: 'managing-contacts',
-    title: 'Managing contacts',
-    summary: 'Work from the same contact list your team already uses in Salesforce.',
-  },
-  {
-    slug: 'reading-your-dashboard',
-    title: 'Reading your dashboard',
-    summary: 'Understand the Milestone Scoreboard, Circuit activity, and closed-loop logging status.',
+    summary: 'A Circuit is a Touchpoint sent to a group of contacts. Creating one takes four steps.',
   },
   {
     slug: 'touchpoints-overview',
     title: 'Touchpoints overview',
-    summary: 'Track every send and follow-up across active and passive campaigns.',
+    summary: 'Touchpoints are the ways you can connect with clients through Facify.',
+  },
+  {
+    slug: 'managing-contacts',
+    title: 'Managing Contacts and Groups',
+    summary: 'The same contact list your team already uses in your CRM. Leverage groups to better orchestrate your engagements.',
   },
   {
     slug: 'choosing-a-vendor',
