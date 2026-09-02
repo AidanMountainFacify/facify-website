@@ -6,11 +6,26 @@ import {
   RefreshCcw,
   Send,
 } from 'lucide-react'
-import dashboardScreenshot from '../assets/dashboard-screenshot.png'
 import Button from '../components/Button'
+import Container from '../components/Container'
 import Eyebrow from '../components/Eyebrow'
+import {
+  CardsIcon,
+  EmailIcon,
+  FoodBeverageIcon,
+  LiteratureIcon,
+  PromoItemsIcon,
+} from '../components/icons/TouchpointIcons'
 import Reveal from '../components/Reveal'
 import Section from '../components/Section'
+
+const touchpoints = [
+  { icon: EmailIcon, label: 'Email' },
+  { icon: CardsIcon, label: 'Cards' },
+  { icon: PromoItemsIcon, label: 'Promotional Items' },
+  { icon: LiteratureIcon, label: 'Sales Literature' },
+  { icon: FoodBeverageIcon, label: 'Food & Beverage' },
+]
 
 const problems = [
   {
@@ -58,38 +73,43 @@ export default function Home() {
   return (
     <>
       <Section className="pb-10 pt-16 sm:pt-24">
-        <div className="grid items-center gap-14 lg:grid-cols-2">
-          <Reveal>
-            <Eyebrow>Built for Salesforce teams</Eyebrow>
-            <h1 className="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-              Multi-channel outreach that keeps your CRM up to date —
-              automatically.
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-muted">
-              Facify eliminates the manual coordination between Salesforce
-              and outreach execution, giving salespeople a fast,
-              multi-channel sending tool that logs itself.
-            </p>
-            <div className="mt-9 flex flex-wrap gap-4">
-              <Button to="/contact">Book a demo</Button>
-              <Button to="/features" variant="secondary">
-                See how it works
-              </Button>
-            </div>
-          </Reveal>
-
-          <Reveal delay={150}>
-            <div className="relative">
-              <div className="absolute -inset-5 -z-10 rounded-[28px] bg-[radial-gradient(120%_120%_at_20%_20%,rgba(91,127,216,0.16)_0%,rgba(91,127,216,0.04)_60%,rgba(91,127,216,0)_100%)]" />
-              <img
-                src={dashboardScreenshot}
-                alt="Facify dashboard showing Circuits activity synced with Salesforce"
-                className="w-full rounded-xl border border-black/5 shadow-[0_30px_60px_-24px_rgba(48,81,163,0.28),0_8px_16px_-8px_rgba(17,24,39,0.08)] transition-transform duration-500 hover:-translate-y-1"
-              />
-            </div>
-          </Reveal>
-        </div>
+        <Reveal className="mx-auto max-w-2xl text-center">
+          <Eyebrow>Built for Salesforce teams</Eyebrow>
+          <h1 className="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+            Multi-channel outreach that keeps your CRM up to date —
+            automatically.
+          </h1>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted">
+            Facify eliminates the manual coordination between Salesforce
+            and outreach execution, giving salespeople a fast,
+            multi-channel sending tool that logs itself.
+          </p>
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
+            <Button to="/contact">Book a demo</Button>
+            <Button to="/features" variant="secondary">
+              See how it works
+            </Button>
+          </div>
+        </Reveal>
       </Section>
+
+      <Reveal>
+        <div className="border-y border-black/5 bg-brand-blue-light/5 py-8">
+          <Container className="flex flex-wrap items-center justify-center gap-4">
+            {touchpoints.map(({ icon: Icon, label }) => (
+              <div
+                key={label}
+                className="group flex items-center gap-3 rounded-full border border-black/5 bg-white py-2 pl-2 pr-5 shadow-[0_1px_3px_rgba(17,24,39,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-blue/20 hover:shadow-[0_12px_24px_-12px_rgba(48,81,163,0.25)]"
+              >
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-blue/10 text-brand-blue transition-transform duration-300 group-hover:scale-110">
+                  <Icon size={18} />
+                </span>
+                <span className="text-sm font-semibold text-ink">{label}</span>
+              </div>
+            ))}
+          </Container>
+        </div>
+      </Reveal>
 
       <Section className="bg-surface">
         <Reveal className="max-w-2xl">
