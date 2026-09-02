@@ -39,7 +39,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Button variant="ghost" href="#">
+          <Button variant="ghost" href="https://app.facify.io/auth/sign-in">
             Sign in
           </Button>
           <Button to="/contact">Book a demo</Button>
@@ -71,7 +71,15 @@ export default function Navbar() {
                 {link.label}
               </NavLink>
             ))}
-            <Button to="/contact" className="mt-2 justify-center" onClick={() => setOpen(false)}>
+            <Button
+              variant="ghost"
+              href="https://app.facify.io/auth/sign-in"
+              className="mt-2 justify-center"
+              onClick={() => setOpen(false)}
+            >
+              Sign in
+            </Button>
+            <Button to="/contact" className="justify-center" onClick={() => setOpen(false)}>
               Book a demo
             </Button>
           </Container>
