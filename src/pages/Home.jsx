@@ -140,18 +140,14 @@ export default function Home() {
         <div className="relative overflow-hidden rounded-3xl bg-[linear-gradient(135deg,#3051a3_0%,#2a4691_60%,#22397a_100%)] px-8 py-16 text-center sm:px-16">
           <div className="pointer-events-none absolute -right-16 -top-20 h-80 w-80 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.10)_0%,rgba(255,255,255,0)_70%)]" />
           <h2 className="relative text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            See Facify running inside your Salesforce org.
+            Let Facify orchestrate your outreach.
           </h2>
           <p className="relative mx-auto mt-4 max-w-xl text-base text-white/80">
-            Vendor-agnostic, no infrastructure changes, live in one setup
-            session.
+            Reliable outreach that runs itself, and never misses a beat.
           </p>
-          <div className="relative mt-8 flex justify-center gap-4">
+          <div className="relative mt-8 flex justify-center">
             <Button to="/contact" variant="white">
               Book a demo
-            </Button>
-            <Button to="/pricing" variant="outline">
-              View pricing
             </Button>
           </div>
         </div>
