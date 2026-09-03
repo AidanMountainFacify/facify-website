@@ -30,12 +30,12 @@ const problems = [
   {
     icon: Send,
     title: 'Manual, fragmented outreach',
-    body: 'Without Facify, reps juggle Salesforce, a promo store, a print vendor, and an email tool independently — time-consuming and error-prone.',
+    body: 'Without Facify, reps juggle your CRM, a promo store, a print vendor, and an email tool independently — time-consuming and error-prone.',
   },
   {
     icon: RefreshCcw,
     title: 'No closed-loop reporting',
-    body: "After sending something manually, reps have to remember to log it back in Salesforce. Many don't — leaving managers with unreliable activity data.",
+    body: "After sending something manually, reps have to remember to log it back in your CRM. Many don't — leaving managers with unreliable activity data.",
   },
   {
     icon: Gauge,
@@ -52,8 +52,8 @@ const features = [
   },
   {
     icon: Plug,
-    title: 'Salesforce Connected',
-    body: 'A Salesforce account is the only requirement. Facify reports back to Salesforce to maintain accurate and consistent activity records automatically.',
+    title: 'CRM Connected',
+    body: 'A CRM account is the only requirement. Facify reports back to your CRM to maintain accurate and consistent activity records automatically.',
   },
 ]
 
@@ -68,13 +68,13 @@ export default function Home() {
     <>
       <Section className="pb-10 pt-16 sm:pt-24">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Built for Salesforce teams</Eyebrow>
+          <Eyebrow>Built to work with your CRM</Eyebrow>
           <h1 className="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
             Multi-channel outreach that keeps your CRM up to date —
             automatically.
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            Facify eliminates the manual coordination between Salesforce
+            Facify eliminates the manual coordination between your CRM
             and outreach execution, giving salespeople a fast,
             multi-channel sending tool that logs itself.
           </p>

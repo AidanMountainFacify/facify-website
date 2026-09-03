@@ -10,7 +10,7 @@ export default function Blog() {
         <div className="max-w-2xl">
           <Eyebrow>Blog</Eyebrow>
           <h1 className="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-            Notes on outreach, Salesforce, and staying in touch at scale.
+            Notes on outreach, CRM data, and staying in touch at scale.
           </h1>
         </div>
       </Section>

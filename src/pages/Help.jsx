@@ -15,8 +15,8 @@ export default function Help() {
             Get the most out of Facify.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted">
-            Tutorials and answers for setting up Circuits, connecting
-            Salesforce, and managing outreach day to day.
+            Tutorials and answers for setting up Circuits, connecting your
+            CRM, and managing outreach day to day.
           </p>
         </div>
       </Section>

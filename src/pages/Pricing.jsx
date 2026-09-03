@@ -8,7 +8,7 @@ const tiers = [
     name: 'Starter',
     description: 'For individual reps getting Circuits running for the first time.',
     features: [
-      'Salesforce plugin install',
+      'CRM plugin install',
       'Up to 3 active Circuits',
       'Closed-loop activity logging',
       'Standard vendor network access',
@@ -47,7 +47,7 @@ export default function Pricing() {
           Plans that scale with your team.
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted">
-          Every plan installs directly into your Salesforce org. Talk to us
+          Every plan installs directly into your existing CRM. Talk to us
           for a quote sized to your team and vendor setup.
         </p>
       </Section>
