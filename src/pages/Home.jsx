@@ -1,6 +1,5 @@
 import {
   CalendarClock,
-  ClipboardCheck,
   Gauge,
   Plug,
   RefreshCcw,
@@ -52,14 +51,9 @@ const features = [
     body: 'Set a trigger — birthday, holiday, or a custom date — and Facify sends the right thing to the right person automatically. Editable any time.',
   },
   {
-    icon: ClipboardCheck,
-    title: 'Closed-loop logging',
-    body: 'Every send is logged back to Salesforce automatically, so managers get reliable activity data without depending on reps to remember.',
-  },
-  {
     icon: Plug,
-    title: 'Installs into Salesforce',
-    body: 'A Salesforce account is the only requirement. Facify installs as a plugin — no complex IT setup or infrastructure changes.',
+    title: 'Salesforce Connected',
+    body: 'A Salesforce account is the only requirement. Facify reports back to Salesforce to maintain accurate and consistent activity records automatically.',
   },
 ]
 
@@ -151,7 +145,7 @@ export default function Home() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-8 sm:grid-cols-2">
           {features.map(({ icon: Icon, title, body }, i) => (
             <Reveal key={title} delay={i * 100}>
               <div className={cardClasses}>
