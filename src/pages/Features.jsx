@@ -34,8 +34,8 @@ const featureGrid = [
   },
   {
     icon: ClipboardCheck,
-    title: 'Closed-loop Salesforce sync',
-    body: 'Every send is logged back to Salesforce the moment it happens, so managers get reliable activity data without depending on reps to remember.',
+    title: 'Closed-loop CRM sync',
+    body: 'Every send is logged back to your CRM the moment it happens, so managers get reliable activity data without depending on reps to remember.',
   },
   {
     icon: Network,
@@ -44,18 +44,18 @@ const featureGrid = [
   },
   {
     icon: Plug,
-    title: 'Installs as a Salesforce plugin',
-    body: 'A Salesforce account is the only hard requirement. No complex IT setup, no infrastructure changes — Facify installs directly into your existing org.',
+    title: 'Installs as a CRM plugin',
+    body: 'A CRM account is the only hard requirement. No complex IT setup, no infrastructure changes — Facify installs directly into your existing CRM.',
   },
   {
     icon: Contact2,
     title: 'Contacts, unified',
-    body: 'Work from the same contact list your team already trusts in Salesforce — no separate list to maintain or keep in sync.',
+    body: 'Work from the same contact list your team already trusts in your CRM — no separate list to maintain or keep in sync.',
   },
   {
     icon: Gauge,
     title: 'Dashboard & reporting',
-    body: 'A milestone scoreboard and Circuit activity view, synced live from Salesforce, so managers can see what is scheduled and what already went out.',
+    body: 'A milestone scoreboard and Circuit activity view, synced live from your CRM, so managers can see what is scheduled and what already went out.',
   },
 ]
 
@@ -79,7 +79,7 @@ export default function Features() {
       <Section className="pt-0">
         <img
           src={dashboardScreenshot}
-          alt="Facify dashboard with Circuits and Milestone Scoreboard synced from Salesforce"
+          alt="Facify dashboard with Circuits and Milestone Scoreboard synced from your CRM"
           className="w-full rounded-xl border border-black/5 shadow-2xl shadow-brand-blue/10"
         />
       </Section>
@@ -137,7 +137,7 @@ export default function Features() {
         <div className="flex flex-col items-center gap-6 rounded-3xl bg-surface px-8 py-14 text-center">
           <Users className="text-brand-blue" size={32} />
           <h2 className="max-w-lg text-2xl font-bold tracking-tight text-ink sm:text-3xl">
-            Ready to see Circuits running against your own Salesforce data?
+            Ready to see Circuits running against your own CRM data?
           </h2>
           <Button to="/contact">Book a demo</Button>
         </div>

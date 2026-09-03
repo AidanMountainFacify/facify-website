@@ -28,12 +28,12 @@ export default function About() {
         <div className="max-w-2xl">
           <Eyebrow>About Facify</Eyebrow>
           <h1 className="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-            We build the connective tissue between Salesforce and real-world
+            We build the connective tissue between your CRM and real-world
             outreach.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted">
             Facify started with a simple observation: sales teams already
-            have the contact data they need in Salesforce, but everything
+            have the contact data they need in their CRM, but everything
             that happens after — the sending, the tracking, the follow-up —
             still happens by hand, in a different tool, and often doesn't
             make it back into the CRM at all.
@@ -73,10 +73,10 @@ export default function About() {
               Built to install into the systems you already run.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted">
-              A Salesforce account is the only hard requirement to get
+              A CRM account is the only hard requirement to get
               started — no complex IT setup or infrastructure changes.
               Facify installs directly as a plugin inside your existing
-              Salesforce environment, and works alongside the print and
+              CRM environment, and works alongside the print and
               promo vendors you already trust.
             </p>
             <div className="mt-8">
@@ -88,9 +88,9 @@ export default function About() {
               Technical requirements
             </p>
             <ul className="mt-5 space-y-4 text-sm text-ink">
-              <li>— An existing Salesforce account</li>
+              <li>— An existing CRM account</li>
               <li>— No infrastructure or IT changes required</li>
-              <li>— Installs directly as a Salesforce plugin</li>
+              <li>— Installs directly as a CRM plugin</li>
               <li>— Works with your existing vendors, or ours</li>
             </ul>
           </div>

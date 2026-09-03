@@ -37,9 +37,9 @@ export default function Contact() {
               <dd className="mt-1 text-sm text-muted">hello@facify.io</dd>
             </div>
             <div>
-              <dt className="text-sm font-semibold text-ink">For teams already using Salesforce</dt>
+              <dt className="text-sm font-semibold text-ink">For teams already using a CRM</dt>
               <dd className="mt-1 text-sm text-muted">
-                Facify installs directly into your existing org — no
+                Facify installs directly into your existing CRM — no
                 infrastructure changes required.
               </dd>
             </div>
