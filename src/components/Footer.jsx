@@ -1,37 +1,13 @@
-import { Link } from 'react-router-dom'
 import Container from './Container'
 import Logo from './Logo'
 
-const columns = [
-  {
-    title: 'Product',
-    links: [
-      { to: '/features', label: 'Features' },
-      { to: '/pricing', label: 'Pricing' },
-      { to: '/contact', label: 'Book a demo' },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      { to: '/about', label: 'About' },
-      { to: '/blog', label: 'Blog' },
-    ],
-  },
-  {
-    title: 'Support',
-    links: [
-      { to: '/help', label: 'Help Center' },
-      { to: '/contact', label: 'Contact' },
-    ],
-  },
-]
-
+// The site is a single page for now, so the footer link columns were
+// removed — see the note in Navbar.jsx for how to restore the other pages.
 export default function Footer() {
   return (
-    <footer className="border-t border-black/5 bg-surface">
+    <footer className="border-t border-black/5 bg-white">
       <Container className="py-14">
-        <div className="flex flex-col justify-between gap-10 md:flex-row">
+        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div className="max-w-xs">
             <Logo />
             <p className="mt-4 text-sm text-muted">
@@ -40,25 +16,12 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
-            {columns.map((col) => (
-              <div key={col.title}>
-                <h4 className="text-sm font-semibold text-ink">{col.title}</h4>
-                <ul className="mt-3 space-y-2">
-                  {col.links.map((link) => (
-                    <li key={link.label}>
-                      <Link
-                        to={link.to}
-                        className="text-sm text-muted hover:text-brand-blue"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <a
+            href="#contact"
+            className="text-sm font-semibold text-brand-blue hover:underline"
+          >
+            Book a demo
+          </a>
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-6 text-xs text-muted sm:flex-row">
