@@ -6,8 +6,10 @@ import {
   Send,
 } from 'lucide-react'
 import Button from '../components/Button'
+import ContactSection from '../components/ContactSection'
 import Container from '../components/Container'
 import Eyebrow from '../components/Eyebrow'
+import FacifyLockup from '../components/FacifyLockup'
 import {
   CardsIcon,
   EmailIcon,
@@ -66,25 +68,41 @@ const iconClasses =
 export default function Home() {
   return (
     <>
-      <Section className="pb-10 pt-16 sm:pt-24">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Built to work with your CRM</Eyebrow>
-          <h1 className="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-            Multi-channel outreach that keeps your CRM up to date —
-            automatically.
-          </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            Facify eliminates the manual coordination between your CRM
-            and outreach execution, giving salespeople a fast,
-            multi-channel sending tool that logs itself.
-          </p>
-          <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <Button to="/contact">Book a demo</Button>
-            <Button to="/features" variant="secondary">
-              See how it works
-            </Button>
-          </div>
-        </Reveal>
+      {/* Light hero: the gradient is a soft wash bleeding in behind the
+          content rather than a block, so the page stays bright. */}
+      <Section className="relative overflow-hidden pb-14 pt-16 sm:pt-24">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-48 -top-56 h-[38rem] w-[38rem] rounded-full bg-[radial-gradient(circle,rgba(31,95,224,0.20)_0%,rgba(31,95,224,0.07)_45%,rgba(31,95,224,0)_72%)]"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-72 -left-56 h-[34rem] w-[34rem] rounded-full bg-[radial-gradient(circle,rgba(10,32,80,0.13)_0%,rgba(10,32,80,0.04)_50%,rgba(10,32,80,0)_75%)]"
+        />
+
+        <div className="relative grid items-center gap-12 lg:grid-cols-[auto_1fr] lg:gap-20">
+          <Reveal className="flex justify-center">
+            <FacifyLockup className="text-brand-blue" />
+          </Reveal>
+
+          <Reveal delay={150} className="text-center lg:text-left">
+            <Eyebrow>Built to work with your CRM</Eyebrow>
+            <h1 className="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+              Let Facify orchestrate your engagement.
+            </h1>
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
+              Facify eliminates the manual coordination between your CRM
+              and outreach execution, giving salespeople a fast,
+              multi-channel sending tool that logs itself.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
+              <Button href="#contact">Book a demo</Button>
+              <Button href="#how-it-works" variant="secondary">
+                See how it works
+              </Button>
+            </div>
+          </Reveal>
+        </div>
       </Section>
 
       <Reveal>
@@ -93,7 +111,7 @@ export default function Home() {
             {touchpoints.map(({ icon: Icon, label }) => (
               <div
                 key={label}
-                className="group flex items-center gap-3 rounded-full border border-black/5 bg-white py-2 pl-2 pr-5 shadow-[0_1px_3px_rgba(17,24,39,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-blue/20 hover:shadow-[0_12px_24px_-12px_rgba(48,81,163,0.25)]"
+                className="group flex items-center gap-3 rounded-full border border-black/5 bg-white py-2 pl-2 pr-5 shadow-[0_4px_12px_-4px_rgba(2,8,23,0.2)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-blue/20 hover:shadow-[0_12px_24px_-12px_rgba(48,81,163,0.25)]"
               >
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-blue/10 text-brand-blue transition-transform duration-300 group-hover:scale-110">
                   <Icon size={18} />
@@ -105,7 +123,7 @@ export default function Home() {
         </div>
       </Reveal>
 
-      <Section className="bg-surface">
+      <Section className="bg-surface-cool">
         <Reveal className="max-w-2xl">
           <Eyebrow>The problem</Eyebrow>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
@@ -132,7 +150,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section>
+      <Section id="how-it-works" className="scroll-mt-20">
         <Reveal className="max-w-2xl">
           <Eyebrow>How Facify helps</Eyebrow>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
@@ -166,8 +184,7 @@ export default function Home() {
 
       <Section className="pt-0">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-[linear-gradient(135deg,#3051a3_0%,#2a4691_60%,#22397a_100%)] px-8 py-16 text-center sm:px-16">
-            <div className="pointer-events-none absolute -right-16 -top-20 h-80 w-80 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.10)_0%,rgba(255,255,255,0)_70%)]" />
+          <div className="relative overflow-hidden rounded-3xl bg-brand-blue px-8 py-16 text-center sm:px-16">
             <h2 className="relative text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Let Facify orchestrate your outreach.
             </h2>
@@ -176,7 +193,7 @@ export default function Home() {
             </p>
             <div className="relative mt-8 flex justify-center">
               <Button
-                to="/contact"
+                href="#contact"
                 variant="white"
                 className="transition-transform duration-300 hover:scale-105"
               >
@@ -186,6 +203,8 @@ export default function Home() {
           </div>
         </Reveal>
       </Section>
+
+      <ContactSection id="contact" />
     </>
   )
 }

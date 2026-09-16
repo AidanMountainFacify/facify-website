@@ -12,6 +12,11 @@
   --color-ink: #111827;
   --color-muted: #6b7280;
   --color-surface: #f3f4f6;
+
+  /* Cool, blue-tinted surface used for the light sections so they sit in
+     the same family as the navy/blue hero instead of reading as neutral
+     gray. The brand's own #F3F4F6 stays available as --color-surface. */
+  --color-surface-cool: #eef2fa;
 }
 
 html {

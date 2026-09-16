@@ -1,19 +1,13 @@
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
 import Button from './Button'
 import Container from './Container'
 import Logo from './Logo'
 
-const links = [
-  { to: '/features', label: 'Features' },
-  { to: '/pricing', label: 'Pricing' },
-  { to: '/about', label: 'About' },
-  { to: '/blog', label: 'Blog' },
-  { to: '/help', label: 'Help' },
-  { to: '/contact', label: 'Contact' },
-]
-
+// The site is a single page for now, so there are no nav links — just
+// the logo and the two actions. The Features, Pricing, About, Help, and
+// Blog pages still live in src/pages; restoring any of them means adding
+// a links array back here and its route in App.jsx.
 export default function Navbar() {
   const [open, setOpen] = useState(false)
 
@@ -22,27 +16,11 @@ export default function Navbar() {
       <Container className="flex h-18 items-center justify-between py-4">
         <Logo />
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {links.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              className={({ isActive }) =>
-                `text-sm font-medium transition-colors hover:text-brand-blue ${
-                  isActive ? 'text-brand-blue' : 'text-ink'
-                }`
-              }
-            >
-              {link.label}
-            </NavLink>
-          ))}
-        </nav>
-
         <div className="hidden items-center gap-3 md:flex">
           <Button variant="ghost" href="https://app.facify.io/auth/sign-in">
             Sign in
           </Button>
-          <Button to="/contact">Book a demo</Button>
+          <Button href="#contact">Book a demo</Button>
         </div>
 
         <button
@@ -56,30 +34,16 @@ export default function Navbar() {
 
       {open && (
         <div className="border-t border-black/5 bg-white md:hidden">
-          <Container className="flex flex-col gap-1 py-4">
-            {links.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                onClick={() => setOpen(false)}
-                className={({ isActive }) =>
-                  `rounded-md px-3 py-2.5 text-sm font-medium ${
-                    isActive ? 'bg-surface text-brand-blue' : 'text-ink'
-                  }`
-                }
-              >
-                {link.label}
-              </NavLink>
-            ))}
+          <Container className="flex flex-col gap-2 py-4">
             <Button
               variant="ghost"
               href="https://app.facify.io/auth/sign-in"
-              className="mt-2 justify-center"
+              className="justify-center"
               onClick={() => setOpen(false)}
             >
               Sign in
             </Button>
-            <Button to="/contact" className="justify-center" onClick={() => setOpen(false)}>
+            <Button href="#contact" className="justify-center" onClick={() => setOpen(false)}>
               Book a demo
             </Button>
           </Container>
