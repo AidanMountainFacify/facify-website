@@ -18,7 +18,7 @@ export const posts = [
   },
   {
     slug: 'vendor-agnostic-by-design',
-    title: 'Why we built Facify to be vendor-agnostic',
+    title: 'Why we built FACiFY to be vendor-agnostic',
     excerpt:
       'Locking customers into one print or promo vendor creates friction. Here is our approach to integrating with the vendors you already trust.',
     date: '2026-04-21',

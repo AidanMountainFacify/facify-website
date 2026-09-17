@@ -30,7 +30,7 @@ const featureGrid = [
   {
     icon: CalendarClock,
     title: 'Circuits',
-    body: 'Assign a trigger — birthday, holiday, or a manually set date — and an item or message upfront. From there, Facify sends automatically. Recipients can live on multiple Circuits at once, and every Circuit is editable at any time.',
+    body: 'Assign a trigger — birthday, holiday, or a manually set date — and an item or message upfront. From there, FACiFY sends automatically. Recipients can live on multiple Circuits at once, and every Circuit is editable at any time.',
   },
   {
     icon: ClipboardCheck,
@@ -40,12 +40,12 @@ const featureGrid = [
   {
     icon: Network,
     title: 'Vendor-agnostic integrations',
-    body: "Facify doesn't lock you into one supplier. Use our network of trusted print and promo vendors, or keep the vendor relationships and contracts you already have.",
+    body: "FACiFY doesn't lock you into one supplier. Use our network of trusted print and promo vendors, or keep the vendor relationships and contracts you already have.",
   },
   {
     icon: Plug,
     title: 'Installs as a CRM plugin',
-    body: 'A CRM account is the only hard requirement. No complex IT setup, no infrastructure changes — Facify installs directly into your existing CRM.',
+    body: 'A CRM account is the only hard requirement. No complex IT setup, no infrastructure changes — FACiFY installs directly into your existing CRM.',
   },
   {
     icon: Contact2,
@@ -69,7 +69,7 @@ export default function Features() {
             Everything outreach needs, none of the busywork.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted">
-            Facify turns scattered tools — a contact list, a promo store, a
+            FACiFY turns scattered tools — a contact list, a promo store, a
             print vendor, an email tool — into one automated, self-logging
             system.
           </p>
@@ -79,7 +79,7 @@ export default function Features() {
       <Section className="pt-0">
         <img
           src={dashboardScreenshot}
-          alt="Facify dashboard with Circuits and Milestone Scoreboard synced from your CRM"
+          alt="FACiFY dashboard with Circuits and Milestone Scoreboard synced from your CRM"
           className="w-full rounded-xl border border-black/5 shadow-2xl shadow-brand-blue/10"
         />
       </Section>

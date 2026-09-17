@@ -19,12 +19,12 @@ export default function ContactSection({ id }) {
   }
 
   return (
-    <Section id={id} className="scroll-mt-20 bg-surface-cool pb-24 pt-16 sm:pt-24">
+    <Section id={id} className="scroll-mt-20 pb-24 pt-16 sm:pt-24">
       <div className="grid gap-16 lg:grid-cols-2">
         <div>
           <Eyebrow>Contact</Eyebrow>
           <h2 className="mt-5 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-            Let's get Facify running in your org.
+            Let's get FACiFY running in your org.
           </h2>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
             Tell us a bit about your team and how you send outreach today.
@@ -39,14 +39,14 @@ export default function ContactSection({ id }) {
             <div>
               <dt className="text-sm font-semibold text-ink">For teams already using a CRM</dt>
               <dd className="mt-1 text-sm text-muted">
-                Facify installs directly into your existing CRM — no
+                FACiFY installs directly into your existing CRM — no
                 infrastructure changes required.
               </dd>
             </div>
           </dl>
         </div>
 
-        <div className="rounded-2xl border border-black/5 bg-white p-8">
+        <div className="rounded-2xl border border-black/10 bg-white p-8 shadow-[0_18px_40px_-24px_rgba(2,8,23,0.25)]">
           {submitted ? (
             <div className="flex flex-col items-center justify-center py-16 text-center">
               <CheckCircle2 className="text-brand-green" size={40} />
