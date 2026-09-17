@@ -26,13 +26,13 @@ export default function About() {
     <>
       <Section className="pb-10 pt-16 sm:pt-24">
         <div className="max-w-2xl">
-          <Eyebrow>About Facify</Eyebrow>
+          <Eyebrow>About FACiFY</Eyebrow>
           <h1 className="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
             We build the connective tissue between your CRM and real-world
             outreach.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted">
-            Facify started with a simple observation: sales teams already
+            FACiFY started with a simple observation: sales teams already
             have the contact data they need in their CRM, but everything
             that happens after — the sending, the tracking, the follow-up —
             still happens by hand, in a different tool, and often doesn't
@@ -75,7 +75,7 @@ export default function About() {
             <p className="mt-5 text-base leading-relaxed text-muted">
               A CRM account is the only hard requirement to get
               started — no complex IT setup or infrastructure changes.
-              Facify installs directly as a plugin inside your existing
+              FACiFY installs directly as a plugin inside your existing
               CRM environment, and works alongside the print and
               promo vendors you already trust.
             </p>

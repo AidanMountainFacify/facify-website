@@ -43,7 +43,7 @@ export const tutorials = [
   {
     slug: 'touchpoints-overview',
     title: 'Touchpoints overview',
-    summary: 'Touchpoints are the ways you can connect with clients through Facify.',
+    summary: 'Touchpoints are the ways you can connect with clients through FACiFY.',
   },
   {
     slug: 'managing-contacts',
@@ -53,6 +53,6 @@ export const tutorials = [
   {
     slug: 'choosing-a-vendor',
     title: 'Choosing a print or promo vendor',
-    summary: 'Use the Facify vendor network, or connect the vendor relationships you already have.',
+    summary: 'Use the FACiFY vendor network, or connect the vendor relationships you already have.',
   },
 ]

@@ -12,7 +12,7 @@ export default function Help() {
         <div className="max-w-2xl">
           <Eyebrow>Help Center</Eyebrow>
           <h1 className="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-            Get the most out of Facify.
+            Get the most out of FACiFY.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted">
             Tutorials and answers for setting up Circuits, connecting your

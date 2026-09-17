@@ -23,7 +23,7 @@ export default function FacifyLockup({ className = '' }) {
 
       <img
         src={facifyWordmark}
-        alt="Facify"
+        alt="FACiFY"
         className="mt-6 w-48 sm:w-52"
       />
     </div>

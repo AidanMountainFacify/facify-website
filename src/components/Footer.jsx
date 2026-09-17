@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-6 text-xs text-muted sm:flex-row">
-          <p>© {new Date().getFullYear()} Facify. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} FACiFY. All rights reserved.</p>
           <p>Built to work with your CRM.</p>
         </div>
       </Container>
