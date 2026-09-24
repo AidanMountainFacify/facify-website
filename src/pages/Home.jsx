@@ -8,7 +8,10 @@ import {
 import Button from '../components/Button'
 import ContactSection from '../components/ContactSection'
 import Eyebrow from '../components/Eyebrow'
-import storefront from '../assets/facify-storefront.webp'
+import storefront1173 from '../assets/facify-storefront-1173.webp'
+import storefront480 from '../assets/facify-storefront-480.webp'
+import storefront720 from '../assets/facify-storefront-720.webp'
+import storefront960 from '../assets/facify-storefront-960.webp'
 import {
   CardsIcon,
   EmailIcon,
@@ -132,8 +135,13 @@ export default function Home() {
               full-width band under the copy below it. One <img>, both
               cases — the grid handles the switch. */}
           <div className="relative h-72 sm:h-80 lg:h-auto">
+            {/* sizes mirrors the layout: the image is its own grid column
+                at lg and up (exactly 50vw) and full width below that, so
+                the browser can pick the right file before CSS resolves. */}
             <img
-              src={storefront}
+              src={storefront1173}
+              srcSet={`${storefront480} 480w, ${storefront720} 720w, ${storefront960} 960w, ${storefront1173} 1173w`}
+              sizes="(min-width: 1024px) 50vw, 100vw"
               width={1173}
               height={932}
               alt="A FACiFY-branded corner newsstand lit up at dusk, its awning listing print, promo, cards, coffee and more."
