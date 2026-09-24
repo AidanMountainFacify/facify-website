@@ -12,7 +12,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-night/80 backdrop-blur">
       <Container className="flex h-18 items-center justify-between py-4">
         <Logo />
 
@@ -33,7 +33,7 @@ export default function Navbar() {
       </Container>
 
       {open && (
-        <div className="border-t border-black/5 bg-white md:hidden">
+        <div className="border-t border-white/10 bg-night md:hidden">
           <Container className="flex flex-col gap-2 py-4">
             <Button
               variant="ghost"

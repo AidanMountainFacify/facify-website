@@ -4,7 +4,7 @@ import Section from '../components/Section'
 export default function NotFound() {
   return (
     <Section className="py-32 text-center">
-      <p className="text-sm font-semibold text-brand-blue">404</p>
+      <p className="text-sm font-semibold text-brand-accent">404</p>
       <h1 className="mt-3 text-3xl font-bold text-ink sm:text-4xl">
         Page not found
       </h1>

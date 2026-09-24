@@ -23,7 +23,10 @@ export default function App() {
           {/* Single-page site for now: only "/" is routed. The Features,
               Pricing, About, Help, Blog, and Contact pages still live in
               src/pages — restore a page by re-adding its import and route
-              here (Blog needs both /blog and /blog/:slug). */}
+              here (Blog needs both /blog and /blog/:slug). Note those pages
+              were written against the old light theme and still carry
+              bg-white / border-black utilities, so they need a dark pass
+              before they can be put back. */}
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

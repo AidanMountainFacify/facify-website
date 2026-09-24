@@ -5,7 +5,7 @@ import Eyebrow from './Eyebrow'
 import Section from './Section'
 
 const inputClasses =
-  'w-full rounded-lg border border-black/10 px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-brand-blue'
+  'w-full rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-muted focus:border-brand-accent'
 
 export default function ContactSection({ id }) {
   const [submitted, setSubmitted] = useState(false)
@@ -46,7 +46,7 @@ export default function ContactSection({ id }) {
           </dl>
         </div>
 
-        <div className="rounded-2xl border border-black/10 bg-white p-8 shadow-[0_18px_40px_-24px_rgba(2,8,23,0.25)]">
+        <div className="rounded-2xl border border-white/10 bg-surface p-8">
           {submitted ? (
             <div className="flex flex-col items-center justify-center py-16 text-center">
               <CheckCircle2 className="text-brand-green" size={40} />

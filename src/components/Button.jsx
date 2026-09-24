@@ -8,11 +8,14 @@ const base =
   'inline-flex items-center justify-center gap-2 rounded-lg border font-semibold transition-colors px-5 py-3 text-sm'
 
 const variants = {
+  // Electric rather than the brand navy: a #3051a3 fill goes muddy
+  // against the near-black page and stops reading as an action.
   primary:
-    'border-brand-blue bg-brand-blue text-white hover:border-brand-blue-dark hover:bg-brand-blue-dark',
+    'border-brand-electric bg-brand-electric text-white hover:border-brand-blue hover:bg-brand-blue',
   secondary:
-    'border-brand-blue/35 bg-white text-brand-blue hover:border-brand-blue hover:bg-brand-blue-light/10',
+    'border-white/25 bg-transparent text-ink hover:border-white/50 hover:bg-white/5',
   ghost: 'border-transparent text-ink hover:bg-surface',
+  // Sits on the blue CTA banner, so it stays a white chip.
   white: 'border-white bg-white text-brand-blue hover:border-white/90 hover:bg-white/90',
 }
 

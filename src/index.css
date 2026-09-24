@@ -3,22 +3,39 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
+  /* Brand palette, unchanged — these are the guide's values. */
   --color-brand-blue: #3051a3;
   --color-brand-blue-dark: #22397a;
   --color-brand-blue-light: #5b7fd8;
   --color-brand-green: #22c55e;
   --color-brand-black: #000000;
 
-  --color-ink: #111827;
-  --color-muted: #4b5563;
-  --color-surface: #f3f4f6;
+  /* On near-black, the brand navy is too dark to carry an action or to
+     be read as text, so the dark theme adds two derived blues:
+     `electric` fills buttons, `accent` is for text and icons. */
+  --color-brand-electric: #1f5fe0;
+  --color-brand-accent: #8aa8f5;
+
+  /* Semantic tokens. These kept their names when the theme flipped, so
+     text-ink / text-muted / bg-surface still mean "primary text",
+     "secondary text" and "raised panel" — they just resolve dark now. */
+  --color-ink: #f4f6fa;
+  --color-muted: #99a3b8;
+  --color-surface: #13161f;
+
+  /* Page background, and a slightly lifted variant for banding. */
+  --color-night: #0a0b10;
+  --color-night-soft: #0f1118;
 }
 
 html {
   scroll-behavior: smooth;
+  /* Renders scrollbars, form controls and focus rings dark rather than
+     letting the browser paint light chrome over a dark page. */
+  color-scheme: dark;
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--color-night);
   color: var(--color-ink);
 }

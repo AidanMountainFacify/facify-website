@@ -8,7 +8,7 @@ import {
 import Button from '../components/Button'
 import ContactSection from '../components/ContactSection'
 import Eyebrow from '../components/Eyebrow'
-import FacifyLockup from '../components/FacifyLockup'
+import storefront from '../assets/facify-storefront.webp'
 import {
   CardsIcon,
   EmailIcon,
@@ -58,33 +58,36 @@ const features = [
   },
 ]
 
-// Sections are all white now, so the cards carry their own definition
-// via border and resting shadow rather than contrast against a tint.
+// The cards sit on the page background, so a lifted surface plus a
+// hairline border is what separates them — shadows barely read on dark.
 const cardClasses =
-  'group rounded-2xl border border-black/10 bg-white p-7 shadow-[0_4px_16px_-12px_rgba(2,8,23,0.3)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/20 hover:shadow-[0_16px_32px_-16px_rgba(48,81,163,0.2)]'
+  'group rounded-2xl border border-white/10 bg-surface p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-accent/30 hover:shadow-[0_16px_32px_-16px_rgba(31,95,224,0.45)]'
 
 const iconClasses =
-  'flex h-11 w-11 items-center justify-center rounded-lg bg-brand-blue/10 text-brand-blue transition-transform duration-300 group-hover:scale-110'
+  'flex h-11 w-11 items-center justify-center rounded-lg bg-brand-accent/10 text-brand-accent transition-transform duration-300 group-hover:scale-110'
 
 export default function Home() {
   return (
     <>
-      {/* Light hero: the gradient is a soft wash bleeding in behind the
-          content rather than a block, so the page stays bright. The copy
-          sits in the first column so its left edge lands on the same
-          container gutter as every section below it — a logo column here
-          would push the headline inward and make the page jump on scroll. */}
-      <Section className="relative overflow-hidden pb-16 pt-16 sm:pt-24">
+      {/* The hero is a real two-column grid rather than a container with an
+          absolutely positioned image, so the copy and the image physically
+          cannot overlap at any width. An earlier version sized the image as
+          a percentage of the viewport while the copy sat in a centred
+          max-w-6xl container; past ~1152px the container stopped growing and
+          the image kept advancing, so the gap closed as the screen widened.
+
+          The left column is exactly 50vw, so `ml-auto max-w-[36rem] px-6`
+          puts the copy's left edge at 50vw - 552px — the same gutter a
+          centred max-w-6xl container produces, keeping the hero aligned with
+          every section below it. */}
+      <section className="relative overflow-hidden lg:min-h-[36rem]">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-48 -top-56 h-[38rem] w-[38rem] rounded-full bg-[radial-gradient(circle,rgba(31,95,224,0.20)_0%,rgba(31,95,224,0.07)_45%,rgba(31,95,224,0)_72%)]"
+          className="pointer-events-none absolute -right-48 -top-56 h-[38rem] w-[38rem] rounded-full bg-[radial-gradient(circle,rgba(31,95,224,0.30)_0%,rgba(31,95,224,0.10)_45%,rgba(31,95,224,0)_72%)] lg:hidden"
         />
-        {/* There was a second wash in the lower left. It sat far enough
-            below the section that `overflow-hidden` sliced it mid-falloff,
-            so it read as a hard-edged block rather than a glow. The single
-            top-right glow carries the effect on its own. */}
 
-        <div className="relative grid items-center gap-12 lg:grid-cols-[1fr_auto] lg:gap-20">
+        <div className="grid lg:grid-cols-2">
+          <div className="relative mx-auto w-full max-w-6xl px-6 pb-16 pt-16 sm:pt-24 lg:ml-auto lg:mr-0 lg:max-w-[36rem] lg:py-24 lg:pr-14">
           <Reveal className="text-center lg:text-left">
             <Eyebrow>Built to work with your CRM</Eyebrow>
             <h1 className="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
@@ -112,9 +115,9 @@ export default function Home() {
                 {touchpoints.map(({ icon: Icon, label }) => (
                   <div
                     key={label}
-                    className="group flex items-center gap-2.5 rounded-full border border-black/5 bg-white py-1.5 pl-1.5 pr-4 shadow-[0_4px_12px_-4px_rgba(2,8,23,0.15)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-blue/20 hover:shadow-[0_12px_24px_-12px_rgba(48,81,163,0.25)]"
+                    className="group flex items-center gap-2.5 rounded-full border border-white/10 bg-surface py-1.5 pl-1.5 pr-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-accent/30 hover:shadow-[0_12px_24px_-12px_rgba(31,95,224,0.5)]"
                   >
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-blue/10 text-brand-blue transition-transform duration-300 group-hover:scale-110">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-accent/10 text-brand-accent transition-transform duration-300 group-hover:scale-110">
                       <Icon size={16} />
                     </span>
                     <span className="text-sm font-semibold text-ink">{label}</span>
@@ -123,12 +126,29 @@ export default function Home() {
               </div>
             </div>
           </Reveal>
+          </div>
 
-          <Reveal delay={150} className="flex justify-center">
-            <FacifyLockup className="text-brand-blue" />
-          </Reveal>
+          {/* Second column: full-bleed to the right edge on lg, and a
+              full-width band under the copy below it. One <img>, both
+              cases — the grid handles the switch. */}
+          <div className="relative h-72 sm:h-80 lg:h-auto">
+            <img
+              src={storefront}
+              width={1173}
+              height={932}
+              alt="A FACiFY-branded corner newsstand lit up at dusk, its awning listing print, promo, cards, coffee and more."
+              className="h-full w-full object-cover object-left"
+            />
+            {/* Dissolves the left edge into the page instead of ending on a
+                hard vertical line. Only on lg, where there is a page beside
+                it to dissolve into. */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-y-0 left-0 hidden w-32 bg-gradient-to-r from-night via-night/40 to-transparent lg:block"
+            />
+          </div>
         </div>
-      </Section>
+      </section>
 
       <Section>
         <Reveal className="max-w-2xl">
