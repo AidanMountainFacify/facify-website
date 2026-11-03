@@ -1,0 +1,271 @@
+/* ==========================================================================
+   FACiFY — site styles
+   ========================================================================== */
+
+:root {
+  --navy: #0A1628;
+  --navy-deep: #070F1D;
+  --navy-border: #1C2B45;
+  --blue: #1A7BF2;
+  --blue-text: #0B5FCC;
+  --blue-light: #7FB6FF;
+  --green: #22C55E;
+  --white: #FFFFFF;
+  --text-muted-dark: #C9D4E6;
+  --text-footer: #A9B8CF;
+  --text-body: #45536B;
+  --font: 'Plus Jakarta Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+/* Base ------------------------------------------------------------------- */
+
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+
+a { color: var(--blue-text); }
+a:hover { color: var(--navy); }
+
+.page {
+  font-family: var(--font);
+  color: var(--navy);
+  background: var(--white);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Header ----------------------------------------------------------------- */
+
+.site-header {
+  background: var(--navy);
+  border-bottom: 1px solid var(--navy-border);
+}
+.site-header__inner {
+  padding: 18px 28px;
+  justify-content: space-between;
+  gap: 16px;
+}
+.site-header__home {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: none;
+}
+.site-header__logo {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 10px;
+  background: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Hero ------------------------------------------------------------------- */
+
+.hero {
+  background: var(--navy);
+  color: var(--white);
+}
+.hero__inner {
+  padding: 96px 28px 112px;
+  gap: 56px;
+}
+.hero__copy {
+  flex: 999 1 520px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.hero__title {
+  margin: 0;
+  font-size: 64px;
+  line-height: 1.04;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.hero__lead {
+  margin: 0;
+  max-width: 34rem;
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-muted-dark);
+}
+.hero__media {
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+.hero__image {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  display: block;
+}
+
+.badge-soc2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: var(--green);
+  border: 1px solid var(--green);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* Approach --------------------------------------------------------------- */
+
+.approach { background: var(--white); }
+.approach__inner {
+  padding: 104px 28px;
+  gap: 56px;
+}
+.approach__copy {
+  flex: 999 1 460px;
+  min-width: 0;
+  max-width: 46rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.eyebrow {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-text);
+}
+.approach__title {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+.approach__body {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text-body);
+}
+.approach__highlight {
+  margin: 8px 0 0;
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--blue-text);
+}
+
+/* Contact ---------------------------------------------------------------- */
+
+.contact {
+  background: var(--navy);
+  color: var(--white);
+}
+.contact__inner {
+  padding: 96px 28px;
+  justify-content: space-between;
+  gap: 40px;
+}
+.contact__copy {
+  flex: 999 1 480px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact__title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+.contact__lead {
+  margin: 0;
+  max-width: 36rem;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text-muted-dark);
+}
+
+/* Footer ----------------------------------------------------------------- */
+
+.site-footer {
+  background: var(--navy-deep);
+  color: var(--text-footer);
+}
+.site-footer__inner {
+  padding: 28px;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 14px;
+}
+.site-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.site-footer__mascot {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.ct-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 22px;
+  font-size: 15px;
+}
+.ct-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--text-muted-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Responsive ------------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .ct-links { justify-content: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .hero__title { font-size: 44px; }
+  .approach__title,
+  .contact__title { font-size: 30px; }
+}

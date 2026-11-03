@@ -1,16 +1,41 @@
-# React + Vite
+# FACiFY website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Static marketing site for [facify.io](https://facify.io). Plain HTML and CSS — no build step.
 
-Currently, two official plugins are available:
+## Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```
+facify-site/
+├── index.html            # The page
+├── og-image.png          # Link preview image (1200×630), served at /og-image.png
+├── css/
+│   └── styles.css        # All site styles
+├── assets/
+│   └── images/
+│       ├── favicon.png
+│       ├── logo.png
+│       ├── hero.png
+│       └── mascot-fred.png
+└── vercel.json           # Vercel hosting config
+```
 
-## React Compiler
+Asset paths in `index.html` are root-relative (`/css/...`, `/assets/...`), so preview
+the site through a local server rather than by opening the file directly.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run locally
 
-## Expanding the Oxlint configuration
+Any static server works, for example:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npx serve .
+```
+
+## Deploy
+
+Hosted on Vercel. `vercel.json` tells Vercel there is no framework, install or build
+step and that the project root is the output directory, so it overrides any build
+settings left over in the Vercel dashboard. Every push to `master` deploys to
+production; other branches get preview URLs.
+
+The Open Graph tags point to `https://facify.io/og-image.png`, so link previews
+only work once the `facify.io` domain is attached to the Vercel project.
